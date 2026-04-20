@@ -3,167 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mykhaylo Gaydeychuk – QA Automation Engineer</title>
-  <meta name="description" content="Mykhaylo Gaydeychuk – QA Automation Engineer specializing in Playwright & API Testing. 4+ years of experience." />
+  <title>Mykhaylo Gaydeychuk – SDET & QA Automation Engineer</title>
+  <meta name="description" content="Mykhaylo Gaydeychuk – SDET & QA Automation Engineer with 8+ years of experience in manual and automated testing. Seeking QA Automation Team Lead / Manager role." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --bg-primary:    #0a0f1e;
-  --bg-secondary:  #0f172a;
-  --bg-card:       #111827;
-  --bg-card-hover: #1a2540;
-  --accent-cyan:   #22d3ee;
-  --accent-blue:   #38bdf8;
-  --accent-teal:   #2dd4bf;
-  --text-primary:  #f1f5f9;
-  --text-secondary:#94a3b8;
-  --text-muted:    #64748b;
-  --border:        rgba(34,211,238,0.15);
-  --border-hover:  rgba(34,211,238,0.45);
-  --radius-sm:     8px;
-  --radius-md:     16px;
-  --radius-lg:     24px;
-  --radius-pill:   9999px;
-  --font:          'Inter', system-ui, sans-serif;
-  --transition:    0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-html { scroll-behavior: smooth; }
-body {
-  font-family: var(--font);
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-
-#particleCanvas {
-  position: fixed; top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none; z-index: 0; opacity: 0.6;
-}
-
-.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-
-.gradient-text {
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* ── NAVBAR ── */
-.navbar {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  padding: 1rem 0;
-  background: rgba(10,15,30,0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border);
-  transition: var(--transition);
-}
-.navbar.scrolled { padding: 0.6rem 0; background: rgba(10,15,30,0.98); box-shadow: 0 0 40px rgba(34,211,238,0.12); }
-.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
-.nav-brand { font-weight: 700; font-size: 1.2rem; color: var(--accent-cyan); text-decoration: none; letter-spacing: -0.02em; transition: var(--transition); }
-.nav-brand:hover { text-shadow: 0 0 20px var(--accent-cyan); }
-.nav-links { list-style: none; display: flex; align-items: center; gap: 0.25rem; }
-.nav-link { color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: 0.9rem; padding: 0.5rem 1rem; border-radius: var(--radius-pill); transition: var(--transition); }
-.nav-link:hover, .nav-link.active { color: var(--accent-cyan); background: rgba(34,211,238,0.1); }
-.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-.hamburger span { display: block; width: 24px; height: 2px; background: var(--accent-cyan); border-radius: 2px; transition: var(--transition); }
-
-/* ── HERO ── */
-.hero { position: relative; z-index: 1; min-height: 100vh; display: flex; align-items: center; padding: 120px 2rem 80px; }
-.hero-content { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; }
-.hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(34,211,238,0.1); border: 1px solid rgba(34,211,238,0.3); border-radius: var(--radius-pill); padding: 0.4rem 1rem; font-size: 0.85rem; font-weight: 500; color: var(--accent-cyan); margin-bottom: 1.5rem; }
-.badge-dot { width: 8px; height: 8px; background: var(--accent-cyan); border-radius: 50%; animation: pulse-dot 2s infinite; }
-@keyframes pulse-dot { 0%,100%{ box-shadow: 0 0 0 0 rgba(34,211,238,0.5); } 50%{ box-shadow: 0 0 0 6px rgba(34,211,238,0); } }
-.hero-title { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
-.hero-subtitle { font-size: clamp(1.1rem, 2.5vw, 1.6rem); font-weight: 600; color: var(--accent-blue); margin-bottom: 1.25rem; }
-.hero-description { font-size: 1.05rem; color: var(--text-secondary); max-width: 560px; margin-bottom: 1rem; line-height: 1.75; }
-.hero-description strong { color: var(--accent-cyan); }
-.hero-summary { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 2rem; font-style: italic; }
-.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.75rem; border-radius: var(--radius-pill); font-weight: 600; font-size: 0.95rem; text-decoration: none; cursor: pointer; border: none; transition: var(--transition); }
-.btn-primary { background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); color: var(--bg-primary); box-shadow: 0 4px 20px rgba(34,211,238,0.35); }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(34,211,238,0.5); }
-.btn-outline { background: transparent; color: var(--accent-cyan); border: 2px solid var(--accent-cyan); }
-.btn-outline:hover { background: rgba(34,211,238,0.1); box-shadow: 0 0 20px rgba(34,211,238,0.3); transform: translateY(-2px); }
-
-.hero-image { display: flex; justify-content: center; }
-.avatar-ring { position: relative; width: 280px; height: 280px; }
-.avatar-glow { position: absolute; inset: -20px; background: radial-gradient(circle, rgba(34,211,238,0.2) 0%, transparent 70%); border-radius: 50%; animation: avatar-pulse 3s ease-in-out infinite; }
-@keyframes avatar-pulse { 0%,100%{ opacity: 0.5; transform: scale(1); } 50%{ opacity: 1; transform: scale(1.05); } }
-.avatar { width: 280px; height: 280px; border-radius: 50%; border: 3px solid var(--accent-cyan); box-shadow: 0 0 40px rgba(34,211,238,0.3); object-fit: cover; position: relative; z-index: 1; animation: float 6s ease-in-out infinite; }
-@keyframes float { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-12px); } }
-
-.scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 1; }
-.scroll-arrow { width: 24px; height: 24px; border-right: 2px solid var(--accent-cyan); border-bottom: 2px solid var(--accent-cyan); transform: rotate(45deg); animation: scroll-bounce 1.5s ease-in-out infinite; opacity: 0.6; }
-@keyframes scroll-bounce { 0%,100%{ transform: rotate(45deg) translateY(0); opacity:0.6; } 50%{ transform: rotate(45deg) translateY(6px); opacity:1; } }
-
-/* ── SECTIONS ── */
-.section-header { text-align: center; margin-bottom: 3.5rem; }
-.section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; }
-.section-divider { width: 60px; height: 3px; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue)); border-radius: var(--radius-pill); margin: 0 auto 1rem; }
-.section-subtitle { color: var(--text-secondary); font-size: 1.05rem; }
-
-/* ── STRENGTHS ── */
-.strengths-section { position: relative; z-index: 1; padding: 6rem 2rem; background: linear-gradient(180deg, transparent, rgba(15,23,42,0.8) 20%, rgba(15,23,42,0.8) 80%, transparent); }
-.strengths-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
-.strength-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 2rem 1.75rem; transition: var(--transition); cursor: default; }
-.strength-card:hover { border-color: var(--border-hover); background: var(--bg-card-hover); transform: translateY(-6px); box-shadow: 0 12px 40px rgba(34,211,238,0.15); }
-.card-icon { width: 56px; height: 56px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
-.card-icon.cyan { background: rgba(34,211,238,0.15); color: var(--accent-cyan); }
-.card-icon.blue { background: rgba(56,189,248,0.15); color: var(--accent-blue); }
-.card-icon.teal { background: rgba(45,212,191,0.15); color: var(--accent-teal); }
-.strength-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem; }
-.strength-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.65; }
-
-/* ── TESTIMONIAL ── */
-.testimonial-section { position: relative; z-index: 1; padding: 4rem 2rem 6rem; }
-.testimonial-card { max-width: 760px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 3rem; text-align: center; position: relative; overflow: hidden; }
-.testimonial-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent); }
-.quote-icon { font-size: 6rem; line-height: 0.5; color: var(--accent-cyan); opacity: 0.3; margin-bottom: 1.5rem; font-family: Georgia, serif; }
-.testimonial-text { font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem; font-style: italic; }
-.testimonial-author { display: flex; align-items: center; gap: 1rem; justify-content: center; }
-.author-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--bg-primary); font-size: 0.9rem; }
-.author-info { text-align: left; }
-.author-info strong { display: block; font-weight: 700; }
-.author-info span { font-size: 0.85rem; color: var(--text-muted); }
-
-/* ── FOOTER ── */
-.footer { position: relative; z-index: 1; padding: 2rem; background: rgba(10,15,30,0.9); border-top: 1px solid var(--border); }
-.footer-content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-.footer-copy { color: var(--text-muted); font-size: 0.9rem; }
-.footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-.footer-link { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: var(--transition); }
-.footer-link:hover { color: var(--accent-cyan); }
-
-/* ── LINKEDIN BADGE ── */
-.linkedin-badge { position: fixed; bottom: 2rem; left: 2rem; z-index: 900; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-pill); width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); text-decoration: none; transition: var(--transition); box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
-.linkedin-badge:hover { border-color: var(--border-hover); box-shadow: 0 0 20px rgba(34,211,238,0.3); transform: translateY(-3px); }
-
-@media (max-width: 900px) {
-  .hero-content { grid-template-columns: 1fr; text-align: center; }
-  .hero-image { order: -1; }
-  .hero-description { margin: 0 auto 1rem; }
-  .hero-badge, .hero-buttons { justify-content: center; }
-  .hero-summary { max-width: 480px; margin: 0 auto 2rem; }
-}
-@media (max-width: 640px) {
-  .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,15,30,0.98); padding: 1rem; border-bottom: 1px solid var(--border); }
-  .nav-links.open { display: flex; }
-  .hamburger { display: flex; }
-  .footer-content { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; }
-  .strengths-grid { grid-template-columns: 1fr; }
-}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <canvas id="particleCanvas"></canvas>
@@ -172,7 +17,7 @@ body {
     <div class="nav-container">
       <a href="#" class="nav-brand">Mykhaylo Gaydeychuk</a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#hero" class="nav-link">Home</a></li>
         <li><a href="#strengths" class="nav-link">Strengths</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
@@ -190,9 +35,9 @@ body {
       <div class="hero-text">
         <div class="hero-badge"><span class="badge-dot"></span>Available for opportunities</div>
         <h1 class="hero-title">Hi, I'm <span class="gradient-text">Mykhaylo Gaydeychuk</span></h1>
-        <h2 class="hero-subtitle">QA Automation Engineer</h2>
-        <p class="hero-description">Playwright &amp; API Testing Expert with over <strong>4 years</strong> of experience in manual and automated testing, specializing in Playwright, Postman, and API validation.</p>
-        <p class="hero-summary">2021–2025: QA Engineer at Sportendo &amp; Delekhomes, focusing on test automation, API testing, and product quality.</p>
+        <h2 class="hero-subtitle">SDET & QA Automation Engineer</h2>
+        <p class="hero-description">Results-driven SDET with <strong>8+ years</strong> of QA experience spanning mining, real estate, and AI-powered language learning. Skilled in Playwright, API testing, and building automation frameworks from scratch.</p>
+        <p class="hero-summary">Seeking a QA Automation Team Lead / Manager role to drive quality excellence and build high-performing QA teams.</p>
         <div class="hero-buttons">
           <a href="https://www.linkedin.com/in/mykhaylo-gaydeychuk/" target="_blank" class="btn btn-primary">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -211,7 +56,7 @@ body {
         </div>
       </div>
     </div>
-    <div class="scroll-indicator"><div class="scroll-arrow"></div></div>
+    <div class="scroll-indicator"><a href="#strengths" aria-label="Scroll to Strengths section"><div class="scroll-arrow"></div></a></div>
   </section>
 
   <!-- STRENGTHS -->
@@ -276,47 +121,97 @@ body {
       </div>
       <div style="display:flex;flex-direction:column;gap:2rem;">
 
+        <!-- Fox You -->
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;position:relative;overflow:hidden;transition:var(--transition);" onmouseover="this.style.borderColor='rgba(34,211,238,0.45)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.15)'">
+          <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#22d3ee,#38bdf8);border-radius:4px 0 0 4px;"></div>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.25rem;">
+            <div>
+              <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.3rem;">SDET / QA Automation Engineer</h3>
+              <div style="color:var(--accent-cyan);font-weight:600;">Fox You — AI English Language Learning Platform · foxyou.ai</div>
+            </div>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.3);border-radius:9999px;padding:0.35rem 1rem;font-size:0.82rem;color:var(--accent-cyan);font-weight:500;">Aug 2024 – Present</span>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Design and implement end-to-end automation frameworks for an AI-powered English language learning platform.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Lead QA planning, risk assessment, and coverage strategy for new feature releases across web and mobile.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Develop and maintain automated test suites using Playwright, covering UI, API, and integration scenarios.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Integrate test automation into CI/CD pipelines using GitHub Actions, enabling fast feedback on every deployment.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Train and mentor QA team members — establishing standards, documentation practices, and automation goals.</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Playwright</span>
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">GitHub Actions</span>
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">TypeScript</span>
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Postman</span>
+          </div>
+        </div>
+
+        <!-- Delek Homes – QA Automation Engineer -->
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;position:relative;overflow:hidden;transition:var(--transition);" onmouseover="this.style.borderColor='rgba(34,211,238,0.45)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.15)'">
           <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#22d3ee,#38bdf8);border-radius:4px 0 0 4px;"></div>
           <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.25rem;">
             <div>
               <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.3rem;">QA Automation Engineer</h3>
-              <div style="color:var(--accent-cyan);font-weight:600;">Sportendo</div>
+              <div style="color:var(--accent-cyan);font-weight:600;">Delek Homes · delekhomes.com</div>
             </div>
-            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.3);border-radius:9999px;padding:0.35rem 1rem;font-size:0.82rem;color:var(--accent-cyan);font-weight:500;">11/2022 – 06/2025</span>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.3);border-radius:9999px;padding:0.35rem 1rem;font-size:0.82rem;color:var(--accent-cyan);font-weight:500;">Jun 2022 – Jul 2024</span>
           </div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
-            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Designed and maintained end-to-end Playwright test suites covering critical user flows across web and mobile platforms.</li>
-            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Built API automation scripts using Postman collections and Newman for CI/CD integration.</li>
-            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Reduced release cycle time by 35% through comprehensive automation coverage and shift-left testing practices.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Promoted from Senior Manual QA to Automation QA Engineer based on technical growth and consistent delivery.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Built Playwright-based automation frameworks covering critical buyer, agent, and listing management workflows.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Integrated automated test suites into CI/CD pipelines, enabling fast and reliable feedback on every deployment.</li>
           </ul>
           <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
             <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Playwright</span>
-            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Postman</span>
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">CI/CD</span>
             <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Jira</span>
             <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">JavaScript</span>
           </div>
         </div>
 
+        <!-- Delek Homes – Senior Manual QA -->
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;position:relative;overflow:hidden;transition:var(--transition);" onmouseover="this.style.borderColor='rgba(34,211,238,0.45)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.15)'">
           <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#22d3ee,#38bdf8);border-radius:4px 0 0 4px;"></div>
           <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.25rem;">
             <div>
-              <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.3rem;">QA Engineer</h3>
-              <div style="color:var(--accent-cyan);font-weight:600;">Delekhomes</div>
+              <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.3rem;">Senior Manual QA Engineer</h3>
+              <div style="color:var(--accent-cyan);font-weight:600;">Delek Homes · delekhomes.com</div>
             </div>
-            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.3);border-radius:9999px;padding:0.35rem 1rem;font-size:0.82rem;color:var(--accent-cyan);font-weight:500;">03/2021 – 09/2022</span>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.3);border-radius:9999px;padding:0.35rem 1rem;font-size:0.82rem;color:var(--accent-cyan);font-weight:500;">Jun 2020 – Jun 2022</span>
           </div>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
-            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Executed comprehensive manual testing plans for web and mobile real estate applications.</li>
-            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Validated REST APIs using Postman and Swagger, ensuring data accuracy and contract compliance.</li>
-            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Increased team test coverage from 60% to 85% through improved documentation and test case creation.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Led end-to-end manual testing of a real estate web platform, covering functional, regression, smoke, and exploratory test cycles.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Conducted comprehensive API testing using Postman and Chrome DevTools; verified data integrity across staging and production.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Created and maintained detailed test plans, test cases, and bug reports in Jira and QaseIO.</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Manual Testing</span>
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Postman</span>
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">QaseIO</span>
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Jira</span>
+          </div>
+        </div>
+
+        <!-- Anteros Metals -->
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2.5rem;position:relative;overflow:hidden;transition:var(--transition);" onmouseover="this.style.borderColor='rgba(34,211,238,0.45)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.15)'">
+          <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#22d3ee,#38bdf8);border-radius:4px 0 0 4px;"></div>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.25rem;">
+            <div>
+              <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:0.3rem;">Software Manual QA Engineer</h3>
+              <div style="color:var(--accent-cyan);font-weight:600;">Anteros Metals · anterosmetals.com</div>
+            </div>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.3);border-radius:9999px;padding:0.35rem 1rem;font-size:0.82rem;color:var(--accent-cyan);font-weight:500;">Jan 2017 – Jun 2020</span>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Performed systematic manual testing of internal mining operations software and client-facing web applications.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Led the QA team in designing and refining QA test procedures, implementing testing processes, and overseeing the end-to-end QA workflow.</li>
+            <li style="display:flex;align-items:flex-start;gap:0.75rem;color:var(--text-secondary);font-size:0.95rem;"><span style="color:var(--accent-cyan);font-size:0.55rem;margin-top:6px;flex-shrink:0;">▶</span>Verified API endpoints and data integrity using Postman and browser developer tools; communicated testing progress and risks to stakeholders.</li>
           </ul>
           <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
             <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Manual Testing</span>
             <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Postman</span>
             <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">SQL</span>
-            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Swagger</span>
+            <span style="background:rgba(56,189,248,0.1);border:1px solid rgba(56,189,248,0.25);border-radius:9999px;padding:0.3rem 0.85rem;font-size:0.8rem;color:var(--accent-blue);font-weight:500;">Bugzilla</span>
           </div>
         </div>
 
@@ -333,33 +228,35 @@ body {
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2rem;">
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;">
-          <h3 style="font-size:1rem;font-weight:700;margin-bottom:1.5rem;color:var(--accent-cyan);">⚡ Testing Tools</h3>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:1.5rem;color:var(--accent-cyan);">⚡ Automation & Testing</h3>
           <div style="display:flex;flex-direction:column;gap:1rem;">
-            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>Playwright</span><span style="color:var(--accent-cyan);">93%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:93%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>Postman</span><span style="color:var(--accent-cyan);">95%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:95%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>Jira / Zephyr</span><span style="color:var(--accent-cyan);">90%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:90%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>JavaScript</span><span style="color:var(--accent-cyan);">85%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:85%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>SQL</span><span style="color:var(--accent-cyan);">78%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:78%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>Playwright</span><span style="color:var(--accent-cyan);">95%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:95%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>Postman / Swagger</span><span style="color:var(--accent-cyan);">93%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:93%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>JavaScript / TypeScript</span><span style="color:var(--accent-cyan);">90%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:90%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>Jira / ZephyrScale / QaseIO</span><span style="color:var(--accent-cyan);">92%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:92%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>SQL / MySQL</span><span style="color:var(--accent-cyan);">80%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:80%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:0.9rem;font-weight:500;margin-bottom:0.4rem;"><span>GitHub Actions (CI/CD)</span><span style="color:var(--accent-cyan);">88%</span></div><div style="height:6px;background:rgba(255,255,255,0.08);border-radius:9999px;overflow:hidden;"><div style="height:100%;width:88%;border-radius:9999px;background:linear-gradient(90deg,#22d3ee,#38bdf8);"></div></div></div>
           </div>
         </div>
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;">
-          <h3 style="font-size:1rem;font-weight:700;margin-bottom:1.5rem;color:var(--accent-cyan);">💡 Soft Skills</h3>
-          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Agile Collaboration</span>
-            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Communication</span>
-            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Problem-Solving</span>
-            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Attention to Detail</span>
-            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Critical Thinking</span>
-            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Multilingual</span>
-            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Documentation</span>
-            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Team Player</span>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:1.5rem;color:var(--accent-cyan);">🛠 Platforms & Tools</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;">
+            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">VS Code</span>
+            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Xcode</span>
+            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">BrowserStack</span>
+            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Chrome DevTools</span>
+            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Confluence</span>
+            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Cucumber / BDD</span>
+            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">Node.js</span>
+            <span style="background:rgba(45,212,191,0.1);border:1px solid rgba(45,212,191,0.25);border-radius:9999px;padding:0.4rem 0.9rem;font-size:0.82rem;color:var(--accent-teal);font-weight:500;">REST API</span>
           </div>
-          <h3 style="font-size:1rem;font-weight:700;margin:1.5rem 0 0.75rem;color:var(--accent-cyan);">🌍 Languages</h3>
+          <h3 style="font-size:1rem;font-weight:700;margin:0.5rem 0 0.75rem;color:var(--accent-cyan);">🌍 Languages</h3>
           <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇺🇸 English</span>
-            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇺🇦 Ukrainian</span>
-            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇷🇺 Russian</span>
-            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇵🇱 Polish</span>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇺🇦 Ukrainian (Native)</span>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇺🇸 English (Fluent)</span>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇨🇳 Mandarin (Upper-Int.)</span>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇪🇸 Spanish (Beginner)</span>
+            <span style="background:rgba(34,211,238,0.1);border:1px solid rgba(34,211,238,0.25);border-radius:9999px;padding:0.3rem 1rem;font-size:0.85rem;color:var(--accent-cyan);font-weight:500;">🇵🇱 Polish (Beginner)</span>
           </div>
         </div>
       </div>
@@ -376,7 +273,7 @@ body {
           <div class="author-avatar">SK</div>
           <div class="author-info">
             <strong>Sergii Kravchenko</strong>
-            <span>Engineering Manager – about <strong style="color:var(--accent-cyan);">Mykhaylo Gaydeychuk</strong></span>
+            <span>Engineering Manager</span>
           </div>
         </div>
       </div>
@@ -391,19 +288,52 @@ body {
         <div class="section-divider"></div>
         <p class="section-subtitle">Open to new opportunities and collaborations</p>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;max-width:800px;margin:0 auto;">
-        <a href="https://www.linkedin.com/in/mykhaylo-gaydeychuk/" target="_blank" style="display:flex;align-items:center;gap:1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem 2rem;text-decoration:none;color:inherit;transition:var(--transition);flex:1;min-width:240px;" onmouseover="this.style.borderColor='rgba(34,211,238,0.45)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.15)'">
-          <div style="width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(34,211,238,0.1);color:var(--accent-cyan);flex-shrink:0;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
-          <div><strong style="display:block;margin-bottom:0.2rem;">LinkedIn</strong><span style="color:var(--text-secondary);font-size:0.9rem;">linkedin.com/in/mykhaylo-gaydeychuk</span></div>
+      <div class="contact-grid">
+
+        <!-- Email -->
+        <a href="mailto:mgajdejchuk@gmail.com" class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Email</strong>
+            <span class="contact-link">mgajdejchuk@gmail.com</span>
+          </div>
         </a>
-        <a href="mailto:mgajdejchuk@gmail.com" style="display:flex;align-items:center;gap:1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem 2rem;text-decoration:none;color:inherit;transition:var(--transition);flex:1;min-width:240px;" onmouseover="this.style.borderColor='rgba(34,211,238,0.45)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.15)'">
-          <div style="width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(34,211,238,0.1);color:var(--accent-cyan);flex-shrink:0;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><strong style="display:block;margin-bottom:0.2rem;">Email</strong><span style="color:var(--text-secondary);font-size:0.9rem;">mgajdejchuk@gmail.com</span></div>
+
+        <!-- Phone -->
+        <a href="tel:+17788149774" class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.35a16 16 0 0 0 5.71 5.71l1.15-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>Phone</strong>
+            <span class="contact-link">+1 (778) 814-9774</span>
+          </div>
         </a>
-        <a href="tel:+14705199240" style="display:flex;align-items:center;gap:1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);padding:1.5rem 2rem;text-decoration:none;color:inherit;transition:var(--transition);flex:1;min-width:240px;" onmouseover="this.style.borderColor='rgba(34,211,238,0.45)'" onmouseout="this.style.borderColor='rgba(34,211,238,0.15)'">
-          <div style="width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(34,211,238,0.1);color:var(--accent-cyan);flex-shrink:0;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.35a16 16 0 0 0 5.71 5.71l1.15-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div><strong style="display:block;margin-bottom:0.2rem;">Phone</strong><span style="color:var(--text-secondary);font-size:0.9rem;">+1 (470) 519-9240</span></div>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/mykhaylo-gaydeychuk/" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>LinkedIn</strong>
+            <span class="contact-link">https://www.linkedin.com/in/mykhaylo-gaydeychuk</span>
+          </div>
         </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/MykhayloG" target="_blank" class="contact-card">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </div>
+          <div class="contact-text">
+            <strong>GitHub</strong>
+            <span class="contact-link">https://github.com/MykhayloG</span>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -416,73 +346,35 @@ body {
         <div class="footer-links">
           <a href="https://www.linkedin.com/in/mykhaylo-gaydeychuk/" target="_blank" class="footer-link">LinkedIn</a>
           <a href="mailto:mgajdejchuk@gmail.com" class="footer-link">mgajdejchuk@gmail.com</a>
-          <a href="tel:+14705199240" class="footer-link">+1 (470) 519-9240</a>
+          <a href="tel:+17788149774" class="footer-link">778-814-9774</a>
+          <a href="https://github.com/MykhayloG" target="_blank" class="footer-link">GitHub</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <a href="https://www.linkedin.com/in/mykhaylo-gaydeychuk/" target="_blank" class="linkedin-badge" aria-label="LinkedIn Profile">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-  </a>
+  <!-- SOCIAL BADGES (left) -->
+  <div class="social-badges">
+    <a href="https://www.linkedin.com/in/mykhaylo-gaydeychuk/" target="_blank" class="social-badge" aria-label="LinkedIn Profile">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="mailto:mgajdejchuk@gmail.com" class="social-badge" aria-label="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </a>
+    <a href="https://github.com/MykhayloG" target="_blank" class="social-badge" aria-label="GitHub">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+  </div>
 
-<script>
-// Particle Canvas
-const canvas = document.getElementById('particleCanvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
-const NUM = 90;
-function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-resize();
-window.addEventListener('resize', resize);
-function Particle() {
-  this.x = Math.random() * canvas.width;
-  this.y = Math.random() * canvas.height;
-  this.vx = (Math.random() - 0.5) * 0.4;
-  this.vy = (Math.random() - 0.5) * 0.4;
-  this.r = Math.random() * 2 + 0.5;
-  this.alpha = Math.random() * 0.6 + 0.2;
-}
-for (let i = 0; i < NUM; i++) particles.push(new Particle());
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if (dist < 140) {
-        ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(34,211,238,${0.12 * (1 - dist/140)})`; ctx.lineWidth = 0.8; ctx.stroke();
-      }
-    }
-  }
-  particles.forEach(p => {
-    ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(34,211,238,${p.alpha})`; ctx.fill();
-    p.x += p.vx; p.y += p.vy;
-    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-  });
-  requestAnimationFrame(draw);
-}
-draw();
+  <!-- STICKY AVATAR + CALLIGRAPHY NAME -->
+  <div class="sticky-avatar" id="stickyAvatar">
+    <img src="https://media.licdn.com/dms/image/v2/C5603AQEXUwqSH18vKA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1576519079208?e=1778112000&v=beta&t=N0shN6lBiEdcn7G9wSPpHPN68FNwrZfnfe2y8uI44XQ" alt="Mykhaylo" />
+    <span class="calligraphy-name">Mykhaylo</span>
+  </div>
 
-// Navbar
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+  <!-- MOUSE TRAIL CANVAS -->
+  <canvas id="mouseTrailCanvas"></canvas>
 
-// Hamburger
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-
-// Scroll animations
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
-}, { threshold: 0.08 });
-document.querySelectorAll('.strength-card, .testimonial-card').forEach(el => {
-  el.style.opacity='0'; el.style.transform='translateY(30px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease'; obs.observe(el);
-});
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
